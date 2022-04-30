@@ -33,64 +33,7 @@
 				<span class="icon-bar"></span> 
 				<span class="icon-bar"></span>
 			</button>
-			<a class="brand" href="">MITREid Connect: Simple Web App</a>
-			<c:if test="${ not empty pageName }">
-				<div class="nav-collapse collapse">
-					<ul class="nav">
-						<c:choose>
-							<c:when test="${pageName == 'Home'}">
-								<li class="active"><a href="#">Home</a></li>
-							</c:when>
-							<c:otherwise>
-								<li><a href=".">Home</a></li>
-							</c:otherwise>
-						</c:choose>
-						<c:choose>
-							<c:when test="${pageName == 'User'}">
-								<li class="active"><a href="#">User</a></li>
-							</c:when>
-							<c:otherwise>
-								<li><a href="user">User</a></li>
-							</c:otherwise>
-						</c:choose>
-						<c:choose>
-							<c:when test="${pageName == 'Admin'}">
-								<li class="active"><a href="#">Admin</a></li>
-							</c:when>
-							<c:otherwise>
-								<li><a href="admin">Admin</a></li>
-							</c:otherwise>
-						</c:choose>
-						<c:choose>
-							<c:when test="${pageName == 'Logout'}">
-								<li class="active"><a href="#">Logout</a></li>
-							</c:when>
-							<c:otherwise>
-								<li><a href="j_spring_security_logout">Logout</a></li>
-							</c:otherwise>
-						</c:choose>
-	
-					</ul>
-					<ul class="nav pull-right">
-	                    <security:authorize access="hasRole('ROLE_USER')">
-						<li class="dropdown">
-							<a id="userButton" class="dropdown-toggle" data-toggle="dropdown" href=""><i class="icon-user icon-white"></i> ${ shortName } <span class="caret"></span></a>
-							<ul class="dropdown-menu pull-right">
-								<li><a href="user" data-toggle="collapse" data-target=".nav-collapse">${ longName }</a></li>
-								<li class="divider"></li>
-								<li><a href="j_spring_security_logout" data-toggle="collapse" data-target=".nav-collapse"><i class="icon-remove"></i> Log out</a></li>
-							</ul>
-						</li>
-	                    </security:authorize>
-	                    <security:authorize access="!hasRole('ROLE_USER')">
-	                    <li>
-	                    	<a id="loginButton" href="login" data-toggle="collapse" data-target=".nav-collapse"><i class="icon-lock icon-white"></i> Log in</a>
-	                    </li>
-	                    </security:authorize>
-	                </ul>
-
-	            </div><!--/.nav-collapse -->
-			</c:if>
+			<a class="brand" href="">Simple Web App</a>
         </div>
     </div>
 </div>
